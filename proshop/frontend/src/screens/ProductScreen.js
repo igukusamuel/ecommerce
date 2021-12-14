@@ -20,7 +20,7 @@ const ProductScreen = () => {
   const params = useParams()
   const navigate = useNavigate()
 
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
 
   const dispatch = useDispatch()
 
@@ -84,11 +84,12 @@ const ProductScreen = () => {
                   </Row>
                 </ListGroupItem>
                 {product.countInStock > 0 && (
-                  <ListGroupItem>
+                  <ListGroup.Item>
                     <Row>
                       <Col>Qty</Col>
                       <Col>
                         <Form.Control
+                          className='selectForm'
                           as='select'
                           value={qty}
                           onChange={(e) => setQty(e.target.value)}
@@ -101,7 +102,7 @@ const ProductScreen = () => {
                         </Form.Control>
                       </Col>
                     </Row>
-                  </ListGroupItem>
+                  </ListGroup.Item>
                 )}
                 <ListGroupItem>
                   <Button
