@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -12,7 +12,6 @@ const UserEditScreen = () => {
   const params = useParams()
   const userId = params.id
 
-  const location = useLocation()
   const navigate = useNavigate()
 
   const [name, setName] = useState('')
